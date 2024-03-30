@@ -1,3 +1,11 @@
-const myServer = require('./my-http-server/02-http');
+const express = require('express');
+const app = express();
 
-myServer.startServer(3000);
+
+
+
+
+
+app.listen('3000', ()=>{
+    console.log('Express server is listening at 3000');
+})
