@@ -1,7 +1,4 @@
-module.exports.items = ['firstItem', 'secondItem'];
-
-const user = {
-    name : 'ranataqvemm'
+const user = {name : 'ranataqvemm'
 }
 
-module.exports.user = user;
+module.exports = user;

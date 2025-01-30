@@ -1,11 +1,17 @@
-const express = require('express');
-const app = express();
+const http = require('http')
+const url = require('url')
+const express = require('express')
+
+const app = express()
+
+app.get('/', (req,res)=> {
+    console.log(url.parse(req.url));
+    console.log('Hello from server');
+    res.send('Hello from server');
+})
+const server = http.createServer(app);
 
 
-
-
-
-
-app.listen('3000', ()=>{
-    console.log('Express server is listening at 3000');
+server.listen(8080, ()=>{
+    console.log('Server is listening at port 8080');
 })
